@@ -1,0 +1,9 @@
+## Interface: 70100
+## Title: RematchNextTarget
+## Notes: Allows to pre-load the team for next trainer
+## SavedVariables: myHorderoute, myAllianceroute, rmtchnxttrgt_saved
+## Author: Kakjens
+## Version: 0.2.0
+## RequiredDeps: Rematch
+
+RematchNextTarget.lua

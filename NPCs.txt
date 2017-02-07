@@ -1,0 +1,115 @@
+--table for reference purposes, edited after copying from Rematch
+rematch.notableGroups = {
+	[1] = L["Eastern Kingdom"],
+	[2] = L["Kalimdor"],
+	[3] = L["Outland"],
+	[4] = L["Northrend"],
+	[5] = L["Cataclysm"],
+	[6] = L["Pandaria"],
+	[7] = L["Beasts of Fable"],
+	[9] = L["Draenor"],
+	[12] = L["Tanaan Jungle"],
+}
+
+rematch.notableNPCs = {
+
+	-- Eastern Kingdom
+	{ 66522, 1, 948,949,947 }, -- Lydia Accoste
+	{ 65656, 1, 887,886,888 }, -- Bill Buckler
+	{ 66478, 1, 932,931,933 }, -- David Kosse
+	{ 66512, 1, 935,936,934 }, -- Deiza Plaguehorn
+	{ 66520, 1, 946,945,944 }, -- Durin Darkhammer
+	{ 65655, 1, 881,880,882 }, -- Eric Davidson
+	{ 66518, 1, 941,943,942 }, -- Everessa
+	{ 64330, 1, 873,872 }, -- Julia Stevens
+	{ 66515, 1, 939,937,938 }, -- Kortas Darkhammer
+	{ 65651, 1, 878,877,879 }, -- Lindsay
+	{ 65648, 1, 875,876,874 }, -- Old MacDonald
+	{ 63194, 1, 885,884,883 }, -- Steven Lisbane
+
+	-- Kalimdor
+	{ 66466, 2, 928,927,929 }, -- Stone Cold Trixxy
+	{ 66136, 2, 894,896,895 }, -- Analynn
+	{ 66422, 2, 908,909,907 }, -- Cassandra Kaboom
+	{ 66135, 2, 891,893,892 }, -- Dagra the Fierce
+	{ 66412, 2, 924,925,926 }, -- Elena Flutterfly
+	{ 66436, 2, 913,911,912 }, -- Grazzle the Great
+	{ 66452, 2, 915,917,916 }, -- Kela Grimtotem
+	{ 66372, 2, 901,902,900 }, -- Merda Stronghoof
+	{ 66352, 2, 906,904,905 }, -- Traitor Gluk
+	{ 66442, 2, 922,923,921 }, -- Zoltan
+	{ 66137, 2, 897,899,898 }, -- Zonya the Sadist
+	{ 66126, 2, 889,890 }, -- Zunta
+
+	-- Outland
+	{ 66557, 3, 964,963,962 }, -- Bloodknight Antari
+	{ 66552, 3, 957,958,956 }, -- Narrok
+	{ 66550, 3, 952,951,950 }, -- Nicki Tinytech
+	{ 66553, 3, 961,959,960 }, -- Morulu The Elder
+	{ 66551, 3, 953,955,954 }, -- Ras'an
+
+	-- Northrend
+	{ 66675, 4, 978,977,979 }, -- Major Payne
+	{ 66635, 4, 967,966,965 }, -- Beegle Blastfuse
+	{ 66639, 4, 976,974,975 }, -- Gutretch
+	{ 66636, 4, 968,970,969 }, -- Nearly Headless Jacob
+	{ 66638, 4, 973,971,972 }, -- Okrut Dragonwaste
+
+	-- Cataclysm
+	{ 66815, 5, 984,983,985 }, -- Bordin Steadyfist
+	{ 66819, 5, 982,980,981 }, -- Brok
+	{ 66822, 5, 987,986,988 }, -- Goz Banefury
+	{ 66824, 5, 989,991,990 }, -- Obalis
+
+	-- Pandaria
+	{ 66741, 6, 1012,1011,1010 }, -- Aki the Chosen
+	{ 66738, 6, 1001,1002,1003 }, -- Courageous Yon
+	{ 66734, 6, 995,997,996 }, -- Farmer Nishi
+	{ 66730, 6, 992,993,994 }, -- Hyuna of the Shrines
+	{ 66733, 6, 1000,999,998 }, -- Mo'ruk
+	{ 66918, 6, 1006,1005,1004 }, -- Seeker Zusshi
+	{ 66739, 6, 1009,1007,1008 }, -- Wastewalker Shu
+	{ 68463, 6, 1130,1131,1139 }, -- Burning Pandaren Spirit
+	{ 68462, 6, 1132,1138,1133 }, -- Flowing Pandaren Spirit
+	{ 68465, 6, 1137,1141,1134 }, -- Thundering Pandaren Spirit
+	{ 68464, 6, 1135,1140,1136 }, -- Whispering Pandaren Spirit
+
+	-- Beasts of Fable
+	{ 68555, 7, 1129 }, -- Ka'wi the Gorger
+	{ 68563, 7, 1192 }, -- Kafi
+	{ 68564, 7, 1193 }, -- Dos-Ryga
+	{ 68565, 7, 1194 }, -- Nitun
+	{ 68560, 7, 1189 }, -- Greyhoof
+	{ 68561, 7, 1190 }, -- Lucky Yi
+	{ 68566, 7, 1195 }, -- Skitterer Xi'a
+	{ 68558, 7, 1187 }, -- Gorespine
+	{ 68559, 7, 1188 }, -- No-No
+	{ 68562, 7, 1191 }, -- Ti'un the Wanderer
+
+	-- Draenor
+	{79858}, --Serr'ah - horde Battle Pet Master
+	{ 87124, 9, 1548,1547,1549 }, -- Ashlei
+	{ 83837, 9, 1424,1443,1444 }, -- Cymre Brightblade
+	{ 87122, 9, 1552,1553,1550 }, -- Gargra
+	{ 87125, 9, 1562,1561,1560 }, -- Taralune
+	{ 87110, 9, 1554,1555,1556 }, -- Tarr the Terrible
+	{ 87123, 9, 1559,1557,1558 }, -- Vesharr
+
+	-- Tanaan Jungle
+	{ 94645, 12, 1681 }, -- Bleakclaw
+	{ 94638, 12, 1674 }, -- Chaos Pup
+	{ 94637, 12, 1673 }, -- Corrupted Thundertail
+	{ 94639, 12, 1675 }, -- Cursed Spirit
+	{ 94644, 12, 1680 }, -- Dark Gazer
+	{ 94650, 12, 1686 }, -- Defiled Earth
+	{ 94642, 12, 1678 }, -- Direflame
+	{ 94647, 12, 1683 }, -- Dreadwalker
+	{ 94640, 12, 1676 }, -- Felfly
+	{ 94601, 12, 1671 }, -- Felsworn Sentry
+	{ 94643, 12, 1679 }, -- Mirecroak
+	{ 94648, 12, 1684 }, -- Netherfist
+	{ 94649, 12, 1685 }, -- Skrillix
+	{ 94641, 12, 1677 }, -- Tainted Mudclaw
+	{ 94646, 12, 1682 }, -- Vile Blood of Draenor
+
+}
