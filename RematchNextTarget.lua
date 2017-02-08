@@ -6,7 +6,7 @@ local saved
 local framebattle
 local framelog
 local frametimer
-local version = "0.2.0"
+local version = "0.2.1"
 local checkpets
 local previous_target = nil
 local rmtchnxt_defaults
@@ -352,11 +352,11 @@ function SlashCmdList.RMTNXT(msg)
 	end
 	if msg == "pets on" then
 		checkpets = true
-		print("Now checking for wrong orfer of pets in trainer")
+		print("Now checking for wrong order of pets in trainer")
 	end
 	if msg == "pets off" then
 		checkpets = false
-		print("Now not checking for wrong orfer of pets in trainer")
+		print("Now not checking for wrong order of pets in trainer")
 	end
 	if msg == "reset1" then
 		if myAllianceroute == nil or (myAllianceroute == {}) then print("ohohoho1") end
