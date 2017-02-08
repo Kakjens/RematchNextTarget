@@ -6,11 +6,12 @@ local saved
 local framebattle
 local framelog
 local frametimer
-local version = "0.2.0"
+local version = "0.2.1"
 local checkpets
 local previous_target = nil
 local rmtchnxt_defaults
 --TODO: some restrcucturisation of code
+--TODO: In Celestial tournament, display suggested defeat order for trainers
 --iekava = 3
 --myAllianceroutetemp = {}
 --myHorderoutetemp = {}
@@ -78,6 +79,24 @@ outland = {
 	[66557] = 66550,
 	[66550] = 0, -- no next target
 }
+local tanaan = {}
+tanaan = {
+	[94650] = 94642,
+	[94642] = 94644,
+	[94644] = 94649,
+	[94649] = 94648,
+	[94648] = 94646,
+	[94646] = 94647,
+	[94647] = 94637,
+	[94637] = 94640,
+	[94640] = 94641,
+	[94641] = 94643,
+	[94643] = 94639,
+	[94639] = 94601,
+	[94601] = 94645,
+	[94645] = 94638,
+	[94638] = 0 -- no next target,
+}
 local allianceDefaultRoute = {}
 local function getallianceDefaultRoute()
 	local aliroute = {}
@@ -96,8 +115,10 @@ local function getallianceDefaultRoute()
 	aliroute = mergetables(aliroute,beastsofFable)
 	--Northrend
 	aliroute = mergetables(aliroute,northrend)
-	--Outlond
+	--Outland
 	aliroute = mergetables(aliroute,outland)
+	--Tanaan
+	aliroute = mergetables(aliroute,tanaan)
 	return aliroute
 end
 
@@ -118,10 +139,12 @@ local function gethordeDefaultRoute()
 	--Beasts of Fable
 	horderoute[64582] = 68564 -- Gentle Sun <Battle�Pet�Trainer> - horde Beasts of Fable quest giver
 	horderoute = mergetables(horderoute,beastsofFable)
-	--Northrend(NYI)
+	--Northrend
 	horderoute = mergetables(horderoute,northrend)
-	--Outlond(NYI)
+	--Outland
 	horderoute = mergetables(horderoute,outland)
+	--Tanaan
+	horderoute = mergetables(horderoute,tanaan)
 	return horderoute
 end
 
@@ -132,6 +155,8 @@ end
 
 local function petbattlefinalround(self,event,winner)
 	--print(winner)
+	--also add option to detect leveling pets who have small amouunt of xp on this level, with possibility to remove from leveling queue
+	--also add option whether have dialog pop-up
 	if winner == 1 then -- show dialog only if the trainer is defeated
 	--if winner == 2 then -- faster testing with forfeiting
 		local key = rematch.recentTarget
@@ -150,8 +175,10 @@ local function petbattlefinalround(self,event,winner)
 							total = total + elapsed
 							if enabled then
 								if total >= 5 then
-									local dialog = StaticPopup_Show ("RMTCHNXTTRGTQ")
-									if dialog then dialog.teamname = route[key] end
+									if route[key] ~= rematchsettings.loadedTeam then
+										local dialog = StaticPopup_Show ("RMTCHNXTTRGTQ")
+										if dialog then dialog.teamname = route[key] end
+									end
 									enabled = false
 								end
 							end
@@ -284,7 +311,7 @@ end)
 SLASH_RMTNXT1 = "/rmtnxt";
 function SlashCmdList.RMTNXT(msg)
 	if msg == "" then
-		print("available comands -/rmtnxt 0; /rmtnxt save1; /rmtnxt save2 ")
+		print("available comands -/rmtnxt 0; /rmtnxt save1; /rmtnxt save2") 
 	end
 	if msg =="0" then
 		local temp = rematchsettings.loadedTeam
@@ -325,11 +352,11 @@ function SlashCmdList.RMTNXT(msg)
 	end
 	if msg == "pets on" then
 		checkpets = true
-		print("Now checking for wrong orfer of pets in trainer")
+		print("Now checking for wrong order of pets in trainer")
 	end
 	if msg == "pets off" then
 		checkpets = false
-		print("Now not checking for wrong orfer of pets in trainer")
+		print("Now not checking for wrong order of pets in trainer")
 	end
 	if msg == "reset1" then
 		if myAllianceroute == nil or (myAllianceroute == {}) then print("ohohoho1") end

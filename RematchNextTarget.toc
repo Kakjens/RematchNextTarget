@@ -3,7 +3,7 @@
 ## Notes: Allows to pre-load the team for next trainer
 ## SavedVariables: myHorderoute, myAllianceroute, rmtchnxttrgt_saved
 ## Author: Kakjens
-## Version: 0.2.0
+## Version: 0.2.1
 ## RequiredDeps: Rematch
 
 RematchNextTarget.lua
