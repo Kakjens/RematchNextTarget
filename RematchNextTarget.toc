@@ -1,9 +1,10 @@
-## Interface: 70100
+## Interface: 70200
 ## Title: RematchNextTarget
 ## Notes: Allows to pre-load the team for next trainer
 ## SavedVariables: myHorderoute, myAllianceroute, rmtchnxttrgt_saved
+## X-Website: https://mods.curse.com/addons/wow/rematch-next-target
 ## Author: Kakjens
-## Version: 0.2.1
+## Version: 0.2.2
 ## RequiredDeps: Rematch
 
 RematchNextTarget.lua
